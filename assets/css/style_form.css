@@ -101,3 +101,10 @@ form .btn {
 .row form {
     width: 650px;
 }
+
+
+.card .card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
