@@ -1,0 +1,44 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    --bs-danger: #40000D;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bg-image {
+    background-size: cover;
+    background: url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80") no-repeat center bottom;
+    height: 100vh;
+}
+
+.btn {
+    background-color: var(--bs-danger);
+    border-color: var(--bs-danger);
+    color: white;
+    margin-top: 70px;
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+.welcome{
+    font-weight: 120;
+    font-size: 19px;
+}
+.welcome h1{
+    font-weight: 120;
+    font-size: 28px;
+}
+
+.logo {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+.logo img {
+    width: 50%;
+    height: auto;
+}
+
+a {
+    color: var(--bs-danger);
+}
