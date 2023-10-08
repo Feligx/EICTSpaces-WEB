@@ -109,14 +109,32 @@
                     </div>
                 </div>
                 <div class="d-flex d-inline align-items-center">
-                    <button type="button" class="btn btn-danger rounded-5">
+                    <button type="button" class="btn btn-danger rounded-5" id="close-account" data-bs-toggle="modal" data-bs-target="#confirmDialog">
                         <span class="fs-5 me-3">
                             <i class="bi bi-power">  </i>
                             Borrar cuenta
                         </span>
-
                     </button>
                 </div>
+            </div>
+
+            <!--Modal-->
+
+            <div class="modal fade" id="confirmDialog" tabindex="-1" role="dialog" aria-labelledby="confirmDialogLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-title ">
+                            <h1 class="modal-title text-justify">
+                                ¿Esta seguro de eliminar su cuenta?
+                            </h1>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"> Cancelar </button>
+                            <button type="button" class="btn btn-danger"> Eliminar </button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
 
