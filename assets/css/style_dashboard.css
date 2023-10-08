@@ -71,6 +71,39 @@
     color: var(--bs-primary);
 }
 
+.search-bar {
+    width: 450px;
+}
+
+.btns {
+    width: 170px;
+}
+
+.search-bar .input-group {
+    width: 400px;
+}
+
+.search-bar.btn {
+    color: white;
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.search-bar .btn:hover {
+    color: white;
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btns .btn {
+    color: white;
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    width: 50px;
+}
+
+
+
 
 .card {
     box-shadow: 0px 5px 7px #837878;
