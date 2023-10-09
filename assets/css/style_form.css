@@ -98,13 +98,20 @@ form .btn {
     color: #001D34;
 }
 
-.row form {
-    width: 650px;
+.card {
+    box-shadow: 0px 5px 7px #7e7676;
 }
-
 
 .card .card-img-top {
     width: 100%;
     height: auto;
     object-fit: cover;
+}
+
+.card-text {
+    text-align: center;
+}
+
+.card .col p {
+    text-align: center;
 }

@@ -72,57 +72,69 @@
             </div>
             <!-- Content here -->
 
-            <div class="row mx-5 justify-content-around align-items-center">
+            <div class="row mx-5 justify-content-around align-items-center my-5">
 
-                
-                    <div class="card ms-4 mt-1 rounded-3 px-0" style="width: 30rem; height: 38rem;">
+                <div class="col">
+                    <div class="card ms-4 mt-1 rounded-3 px-0" style="width: auto; height: auto;">
                         
                             <img src="https://matizzo.com/wp-content/uploads/2020/04/IMG_6930-scaled.jpg" class="card-img-top rounded-3" alt="...">
                             <div class="card-body">
                             <h5 class="card-text">Salon Ada Lovelace</h5>
                             <p class="card-text mt-0 mb-1">Claustro - Edificio Calatrava - Piso 5</p>
-                            <p class="card-text mt-0">
-                                <span class="ms-2">
-                                    <i class="bi bi-people-fill"></i>
-                                    22
-                                </span> 
-                                <span class="ms-4">
-                                    <i class="bi bi-laptop"></i>
-                                    22
-                                </span>
-                            </p>
+                            <div class="row align-items-top mt-4 mx-3">
+                                <div class="col">
+                                    <p>
+                                        Fecha y hora elegidas:
+                                        <ul>
+                                            <li>1/1/24, 7:00 am - 9:00 am</li>
+                                            <li>8/1/24, 7:00 am - 9:00 am</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                                
+                                <div class="col align-content-center">
+                                    <p>
+                                        Capacidad:
+                                        <ul>
+                                            <li>20 personas</li>
+                                            <li>20 Computadores</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
                             </div>
                         
                     </div>
+                </div>
                 
-                
-                
-                    <form class="mt-4 mb-4">
-                        <div class="mb-3">
+                <div class="col">
+                    <form class="mt-4 mb-4" style="width: auto;">
+                        <div class="mb-5">
                             <label for="NombreEvento" class="form-label">Nombre del evento: </label>
                             <input type="text" class="form-control" id="NombreEvento">
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-5">
                             <label for="NombreCompleto" class="form-label">Nombre completo: </label>
                             <input type="text" class="form-control" id="NombreCompleto">
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-5">
                         <label for="CorreoE" class="form-label">Email address: </label>
                         <input type="email" class="form-control" id="CorreoE" aria-describedby="emailHelp">
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-5">
                         <label for="NumeroTel" class="form-label">Numero de telefono: </label>
-                        <input type="number" class="form-control" id="NumeroTel">
+                        <input type="tel" class="form-control" id="NumeroTel">
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-5">
                             <label for="Description" class="form-label">Descripción: </label>
                             <input type="text" class="form-control" id="Description">
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-secondary">Submit</button>
                         </div>
                     </form>
-                
+                </div>
+
             </div>
             
 
