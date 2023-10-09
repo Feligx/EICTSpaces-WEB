@@ -10,9 +10,18 @@
     max-height: 40%;
 }
 
-.foto-perfil{
-    border-radius: 100%;
+.foto-perfil img{
+    border-radius: 0%;
+    float: left;
+    width: 300px;
+    height: 150px;
 }
+
+.foto-lab img{
+    width: 300px;
+    height: 100px;
+}
+
 
 .g-0 {
     margin-bottom: 40px;
@@ -26,8 +35,4 @@
     margin-bottom: 20px;
 }
 
-.card-body {
-    white-space: nowrap;
-    overflow-x: auto;
-}
-  
+
