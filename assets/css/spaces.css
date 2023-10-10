@@ -4,3 +4,7 @@
     background-repeat: no-repeat;
     min-height: 200px;
 }
+
+.offcanvas-body.nav ul {
+    list-style: none;
+}
