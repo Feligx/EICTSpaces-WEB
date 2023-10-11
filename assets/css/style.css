@@ -55,3 +55,7 @@
 .breadcrumb {
     color: var(--bs-primary);
 }
+
+.offcanvas-body.nav ul {
+    list-style: none;
+}
