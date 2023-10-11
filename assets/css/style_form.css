@@ -70,3 +70,48 @@
 .breadcrumb {
     color: var(--bs-primary);
 }
+
+.miga {
+    font-weight: lighter;
+}
+
+form {
+    color: #001D34;
+}
+
+form .btn {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.col .im {
+    width: 450px;
+    box-shadow: 0px 5px 7px #837878;
+}
+
+.col .tit {
+    color: #001D34;
+    text-align: center;
+}
+
+.col p {
+    color: #001D34;
+}
+
+.card {
+    box-shadow: 0px 5px 7px #7e7676;
+}
+
+.card .card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-text {
+    text-align: center;
+}
+
+.card .col p {
+    text-align: center;
+}

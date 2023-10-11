@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="../../assets/css/style_form.css">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="menu col col-md-auto bg-primary ps-0">
+            <div class="nav d-flex flex-sm-column flex-row align-items-start justify-content-between sticky-top h-100">
+                <div>
+                    <a class="navbar-brand align-self-center d-flex align-items-center justify-content-center py-3 mb-5" href="#">
+                        <img src="../../assets/img/ur_logo.svg" alt="Logo" class="d-inline-block align-text-top me-2">
+                        <span class="fs-3">Spaces</span>
+                    </a>
+                    <ul class="p-0 m-0">
+                            <li class="nav-item active">
+                                <a class="nav-link d-flex align-items-center py-1" aria-current="page" href="dashboard.html">
+                                    <span class="fs-4 me-2">
+                                        <i class="bi bi-house-fill"></i>
+                                    </span>
+                                    Dashboard
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-center py-1" href="#">
+                                    <span class="fs-4 me-2">
+                                        <i class="bi bi-calendar-fill"></i>
+                                    </span>
+                                    Calendario
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-center py-1" href="#">
+                                    <span class="fs-4 me-2">
+                                        <i class="bi bi-clock-fill"></i>
+                                    </span>
+                                    Reservas
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+                <div class="bottom-menu">
+                    <a class="nav-link d-flex align-items-center py-1" aria-current="page" href="#">
+                        <div class="avatar text-primary bg-white me-2">
+                            JD
+                        </div>
+                        Jhon Doe
+                    </a>
+                    <a class="nav-link d-flex align-items-center py-1" aria-current="page" href="#">
+                        <span class="fs-4 me-3">
+                            <i class="bi bi-box-arrow-right"></i>
+                        </span>
+                        Logout
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col p-0 min-vh-100 text-white d-flex flex-column">
+            <div class="breadcrumb p-4 py-3">
+                Dashboard | 
+                <span class="miga ms-2">
+                    Salon Ada Lovelace > Calendario > Formulario de reserva
+                </span>
+            </div>
+            <!-- Content here -->
+
+            <div class="row mx-5 justify-content-around align-items-center my-5">
+
+                <div class="col col-md-4">
+                    <div class="card ms-4 mt-1 rounded-3 px-0" style="width: auto; height: auto;">
+                        
+                            <img src="https://matizzo.com/wp-content/uploads/2020/04/IMG_6930-scaled.jpg" class="card-img-top rounded-3" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-text">Salon Ada Lovelace</h5>
+                            <p class="card-text mt-0 mb-1">Claustro - Edificio Calatrava - Piso 5</p>
+                            <div class="row align-items-top mt-4 mx-3">
+                                <div class="col">
+                                    <p>
+                                        Fecha y hora elegidas:
+                                        <ul>
+                                            <li>1/1/24, 7:00 am - 9:00 am</li>
+                                            <li>8/1/24, 7:00 am - 9:00 am</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                                
+                                <div class="col align-content-center">
+                                    <p>
+                                        Capacidad:
+                                        <ul>
+                                            <li>20 personas</li>
+                                            <li>20 Computadores</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <form class="mt-4 mb-4" style="width: auto;">
+                        <div class="mb-5">
+                            <label for="NombreEvento" class="form-label">Nombre del evento: </label>
+                            <input type="text" class="form-control" id="NombreEvento">
+                        </div>
+                        <div class="mb-5">
+                            <label for="NombreCompleto" class="form-label">Nombre completo: </label>
+                            <input type="text" class="form-control" id="NombreCompleto">
+                        </div>
+                        <div class="mb-5">
+                        <label for="CorreoE" class="form-label">Email address: </label>
+                        <input type="email" class="form-control" id="CorreoE" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-5">
+                        <label for="NumeroTel" class="form-label">Numero de telefono: </label>
+                        <input type="tel" class="form-control" id="NumeroTel">
+                        </div>
+                        <div class="mb-5">
+                            <label for="Description" class="form-label">Descripción: </label>
+                            <input type="text" class="form-control" id="Description">
+                        </div>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button type="submit" class="btn btn-secondary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            
+
+            
+
+            <footer class="footer bg-secondary px-2 py-3 mt-auto d-flex justify-content-between align-items-center">
+                RLV2© 2023
+                <img src="../../assets/img/ur_logotype.svg" alt="Logo" class="d-inline-block align-text-top me-2 logo">
+            </footer>
+        </div>
+    </div>
+</div>
+<!-- Bootstrap link -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+</html>
