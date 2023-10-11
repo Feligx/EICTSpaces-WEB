@@ -1,0 +1,57 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+* {
+    --bs-primary: #001D34;
+    font-family: 'Poppins', sans-serif;
+}
+.bg-primary {
+    background-color: var(--bs-primary) !important;
+}
+.menu .nav .nav-item {
+    background-color: var(--bs-primary);
+    min-width: 200px;
+    border-radius: 0 20px 20px 0;
+    margin-bottom: 1.5rem;
+}
+.menu .nav .nav-item.active {
+    background-color: white;
+}
+.menu .nav .nav-item:hover {
+    background-color: white;
+}
+.menu .nav .nav-item .nav-link {
+    color: white;
+}
+.menu .nav .nav-item:hover .nav-link {
+    color: var(--bs-primary);
+}
+.menu .nav .nav-item.active .nav-link {
+    color: var(--bs-primary);
+}
+.menu .nav .navbar-brand {
+    color: white;
+}
+.menu .nav .navbar-brand img {
+    max-width: 40px;
+}
+.menu .nav .bottom-menu .nav-link {
+    color: white;
+}
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.avatar.text-primary {
+    color: var(--bs-primary) !important;
+}
+.footer .logo {
+    max-height: 40px;
+}
+.breadcrumb {
+    color: var(--bs-primary);
+}
