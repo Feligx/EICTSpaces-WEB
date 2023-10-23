@@ -194,11 +194,28 @@
                         </div>
                         <div class="modal-footer justify-content-center border-0">
                             <button class="btn btn-outline-danger rounded-pill me-2" data-bs-dismiss="modal">Cancelar</button>
-                            <button class="btn btn-success rounded-pill me-2" data-bs-dismiss="modal">Ok</button>
+                            <button class="btn btn-success rounded-pill me-2" data-bs-toggle="modal" data-bs-target="#changesconf" >Ok</button>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Modal changesconf se queda en editar-->
+            <div class="modal fade" id="changesconf" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" data-bs-dismiss="modal" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body text-center pb-0">
+                            <span class="text-info" style="font-size: 7.5rem;">
+                                <!--I want the check to be green-->
+                                <i class="bi bi-check-circle-fill greencheck"></i>
+                            </span>
+                            <p class="fs-5 text-dark">Eliminado / Guardado Exitosamente</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal changesconf -->
+            
 
             <footer class="footer bg-secondary px-2 py-1 mt-auto d-flex justify-content-between align-items-center">
                 RLV2© 2023

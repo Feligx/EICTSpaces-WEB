@@ -116,7 +116,7 @@
                             Editar Espacio
                         </div>
                         <div>
-                            <button class="btn btn-danger me-2">
+                            <button class="btn btn-danger me-2" data-bs-toggle="modal" data-bs-target="#changesconfdel">
                                 <i class="bi bi-trash3-fill"></i>
                             </button>
                             <a href="edit_space_enabled.html">
@@ -191,6 +191,30 @@
 
                 </div>
             </div>
+
+            <!-- Modal changesconfdel para borrar espacio manda a dashboard-->
+            <div class="modal fade" id="changesconfdel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" data-bs-dismiss="modal" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <!--I want the button to go to another page like on a when you use href-->
+                            <a href="../dashboard/dashboard.html"> 
+                            <button type="button" data-dismiss="modal" aria-label="Close" >
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                            </a>
+                          </div>
+                        <div class="modal-body text-center pb-0">
+                            <span class="text-info" style="font-size: 7.5rem;">
+                                <!--I want the check to be green-->
+                                <i class="bi bi-check-circle-fill greencheck"></i>
+                            </span>
+                            <p class="fs-5 text-dark">Eliminado / Guardado Exitosamente</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal changesconfdel -->
 
             <footer class="footer bg-secondary px-2 py-1 mt-auto d-flex justify-content-between align-items-center">
                 RLV2© 2023
