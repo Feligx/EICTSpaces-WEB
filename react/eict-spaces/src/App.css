@@ -1,0 +1,12 @@
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    color: #213547;
+    background-color: #ffffff;
+}
