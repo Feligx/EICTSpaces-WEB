@@ -1,0 +1,13 @@
+.profile-avatar img{
+    /*object-fit: cover;*/
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    margin-bottom: 10px;
+}
+.profile-text {
+    color: black;
+    font-size: 48px;
+    font-weight: 120;
+    margin-bottom: 50px;
+}
