@@ -1,6 +1,7 @@
 import './Login.css'
 import {Button, Col, Container, Form, Input, Label, Row} from "reactstrap";
 import logo from "../../assets/ur_logo2.svg"
+import {Link} from "react-router-dom";
 const Login = () => {
     return (
         <Container fluid>
@@ -15,9 +16,9 @@ const Login = () => {
                         Reserva de espacios
                     </span>
 
-                    <img className="my-5 login-logo" src={logo}/>
+                    <img className="my-5 login-logo" src={logo} alt="logo" />
 
-                    <Button color="danger" className="rounded-pill">
+                    <Button tag={Link} to="/dashboard" color="danger" className="rounded-pill">
                         Iniciar sesión con cuenta UR
                     </Button>
                     <Form className="form-check d-flex justify-content-center mt-2">
