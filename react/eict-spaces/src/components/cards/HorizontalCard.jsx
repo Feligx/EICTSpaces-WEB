@@ -1,42 +1,35 @@
-import { Card, CardBody, CardImg, CardText, CardTitle } from "reactstrap"
+import { Card, CardBody, CardImg, CardText, CardTitle, Col, Row } from "reactstrap"
 import './HorizontalCard.css'
 import { Link } from 'react-router-dom'
 import CardStat from "./CardStat"
 //el link envia a la modal
-const HorizontalCard = ({ nombreSalon, profilePic, person, pc, image, link,reason }) => {
+const HorizontalCard = ({ nombreSalon, profilePic, person, image, linkModal, reason }) => {
     return (
-        <Link to={link}> 
-            <Card className="card mb-3 card-first">
-                <Card className="row g-0">
+        <Link to={linkModal}> 
+            <Row className="card mb-3 row g-0">
+                <Col className="col-2">
+                    <CardImg src={profilePic} className="card-img-top rounded-3 foto-perfil"></CardImg>
+                </Col>
 
-                    <Card className="col-2">
-                        <CardImg src={profilePic} className="card-img-top rounded-3 foto-perfil"></CardImg>
-                    </Card>
+                <Col className="col-6">
+                    <Row>
+                        <CardTitle className="card-title">
+                            {nombreSalon}
+                        </CardTitle>
+                        <CardText className="mt-0">
+                            {reason}
+                        </CardText>                        
+                        <CardText className="mt-0">{person}</CardText>
+                    </Row>
+                </Col>
 
-                    <Card className="col-6">
-                        <CardBody>
-                            <CardTitle className="card-title">
-                                {nombreSalon}
-                                <br>
-                                {reason}
-                                </br>
-                            </CardTitle>
-                            <CardText className="mt-0">{person}</CardText>
-                            <CardStat people={people} pc={pc} />
-                        </CardBody>
-                    </Card>
-
-                    <Card className="col-4 foto-lab">
-                        <CardImg src={image} className="card-img-top rounded-3"></CardImg>
-                    </Card>
-                </Card>
-            </Card>
+                <Col className="col-4 foto-lab">
+                    <CardImg src={image} className="card-img-top rounded-3"></CardImg>
+                </Col>
+            </Row>
         </Link>
     )
 }
 
 export default HorizontalCard
-
-//<div class="">
-            
 
