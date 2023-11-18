@@ -1,9 +1,9 @@
 import { Card, CardBody, CardImg, CardText, CardTitle } from "reactstrap"
-import './VerticalCard.css'
+import './HorizontalCard.css'
 import { Link } from 'react-router-dom'
 import CardStat from "./CardStat"
 //el link envia a la modal
-const VerticalCard = ({ nombreSalon, profilePic, person, pc, image, link,reason }) => {
+const HorizontalCard = ({ nombreSalon, profilePic, person, pc, image, link,reason }) => {
     return (
         <Link to={link}> 
             <Card className="card mb-3 card-first">
@@ -35,7 +35,7 @@ const VerticalCard = ({ nombreSalon, profilePic, person, pc, image, link,reason 
     )
 }
 
-export default VerticalCard
+export default HorizontalCard
 
 //<div class="">
             
