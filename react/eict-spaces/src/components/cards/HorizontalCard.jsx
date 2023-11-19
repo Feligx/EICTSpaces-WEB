@@ -8,12 +8,9 @@ const HorizontalCard = ({ nombreSalon, profilePic, person, image, linkModal, rea
         <Card className="card mb-3">    
             <Link to={linkModal}> 
                 <Row className="row g-0">
-
-                        <Container  className="card-img-top rounded-3 foto-perfil">
-                            <img src={profilePic}></img>
-                        </Container>
-
-
+                    <Col  className="card-img-top rounded-3 foto-perfil">
+                        <img src={profilePic}></img>
+                    </Col>
                     <Col className="col-6">
                         <Row>
                             <CardTitle className="card-title">
@@ -25,7 +22,6 @@ const HorizontalCard = ({ nombreSalon, profilePic, person, image, linkModal, rea
                             <CardText className="mt-0">{person}</CardText>
                         </Row>
                     </Col>
-
                     <Col className="col-4 foto-lab">
                         <CardImg src={image} className="card-img-top rounded-3"></CardImg>
                     </Col>
