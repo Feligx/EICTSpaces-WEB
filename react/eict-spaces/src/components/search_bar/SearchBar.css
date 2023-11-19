@@ -5,3 +5,17 @@
     --bs-primary: #001D34;
     font-family: 'Poppins', sans-serif;
 }
+
+.main_r{
+    display: flex;
+}
+
+.btns {
+    display: flex;
+    justify-content: right;
+}
+
+.bton {
+    background-color: var(--bs-primary) !important;
+    height: 2.5rem;
+}
