@@ -3,7 +3,7 @@ import { Card, CardBody, CardImg, CardText } from "reactstrap"
 
 const CardStat = ({people, pc}) => {
     return (
-        <div className="d-flex">
+        <div className="d-flex justify-content-center">
             <PeopleFill className="ms-2"/>
             <CardText className="ms-1">{people}</CardText>
             <LaptopFill className="ms-4"/>

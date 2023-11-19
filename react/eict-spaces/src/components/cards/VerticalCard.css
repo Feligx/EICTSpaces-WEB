@@ -15,6 +15,12 @@
     height: 50%;
     object-fit: cover;
 }
+
+.c_img2 {
+    height: 20rem;
+    object-fit: cover;
+
+}
 .link {
     width: 15rem !important; 
     height: 21rem !important;
