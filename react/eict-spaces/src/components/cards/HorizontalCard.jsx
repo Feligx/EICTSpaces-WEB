@@ -2,6 +2,7 @@ import { Card, CardBody, CardImg, CardText, CardTitle, Col, Row,Container } from
 import './HorizontalCard.css'
 import { Link } from 'react-router-dom'
 import CardStat from "./CardStat"
+import ModalBookings1 from '../../components/cards/ModalBookings1'
 //el link envia a la modal
 const HorizontalCard = ({ nombreSalon, profilePic, person, image, linkModal, reason }) => {
     return (
