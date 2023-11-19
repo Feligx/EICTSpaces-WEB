@@ -1,8 +1,9 @@
 import HorizontalCard from '../../components/cards/HorizontalCard'
+import { Col } from 'reactstrap'
 
 const Bookings = () => {
     return (
-        <div className="container">
+        <Col className='container align-items'>
             <HorizontalCard 
                 nombreSalon = "nombreSalon"
                 profilePic = "../../../public/fotoperf.webp"
@@ -19,17 +20,15 @@ const Bookings = () => {
                 reason = "para ver bochi" 
                 userAdmin = {true}
             />
-
-
             <HorizontalCard
                 nombreSalon = "nombreSalon"
                 profilePic = "../../../public/fotoperf.webp"
                 person = "Camilo F"
                 image = "../../../public/space.jpg"
                 reason = "para ver bochi" 
+                userAdmin = {true}
             />
-
-        </div>
+        </Col>
     )
 }
 

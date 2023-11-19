@@ -1,7 +1,7 @@
 import { Card, Button, CardImg, CardText, CardTitle, Col, Row, Modal, ModalHeader, ModalFooter, ModalBody } from "reactstrap"
 import './HorizontalCard.css'
 import {useState} from "react";
-//el link envia a la modal
+
 const HorizontalCard = ({ nombreSalon, profilePic, person, image, reason, userAdmin }) => {//userAdmin es un booleano que indica si el usuario es admin o no para las modales
     const [modal, setModal] = useState(false);
     const [modal2, setModal2] = useState(false);
@@ -10,7 +10,7 @@ const HorizontalCard = ({ nombreSalon, profilePic, person, image, reason, userAd
     let togs = userAdmin==true ? toggle : toggle2
     return (
         <>
-            <Button onClick = {togs}  className="w-100 hori-card"> 
+            <Button onClick = {togs}  className="w-100 hori-card no-gutters"> 
                 <Card className="card mb-3">   
                         <Row className="row g-0">
                             <Col  className="card-img-top rounded-3 foto-perfil">
