@@ -3,7 +3,7 @@ import { Col } from 'reactstrap'
 
 const Bookings = () => {
     return (
-        <Col className='container align-items'>
+        <Col className='container d-flex flex-column'>
             <HorizontalCard 
                 nombreSalon = "nombreSalon"
                 profilePic = "../../../public/fotoperf.webp"

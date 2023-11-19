@@ -11,7 +11,7 @@ const HorizontalCard = ({ nombreSalon, profilePic, person, image, reason, userAd
     return (
         <>
             <Button onClick = {togs}  className="w-100 hori-card no-gutters"> 
-                <Card className="card mb-3">   
+                <Card className="card ">   
                         <Row className="row g-0">
                             <Col  className="card-img-top rounded-3 foto-perfil">
                                 <img src={profilePic}></img>
@@ -33,7 +33,7 @@ const HorizontalCard = ({ nombreSalon, profilePic, person, image, reason, userAd
                         </Row>
                 </Card>
             </Button>
-            <div className="d-flex mb-5">
+            <div className="">
                 <Modal isOpen={modal} toggle={toggle}>
                     <ModalHeader toggle={toggle}>
                         <h4 className="modal-title">
@@ -67,7 +67,7 @@ const HorizontalCard = ({ nombreSalon, profilePic, person, image, reason, userAd
                     </ModalFooter>
                 </Modal>
             </div>
-            <div className="d-flex mb-5">
+            <div className="">
                 <Modal isOpen={modal2} toggle={toggle2}>
                     <ModalHeader toggle={toggle2}>
                         <h4 className="modal-title">
