@@ -1,0 +1,8 @@
+.crumbs {
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    width: 100%;
+    min-height: 3.45rem;
+    box-shadow: 0 4px 24px 0 rgba(34,41,47,.1);;
+}

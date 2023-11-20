@@ -7,29 +7,34 @@ import Spaces from "./views/spaces/Spaces.jsx";
 import Footer from "./components/layout/footer/Footer.jsx";
 import {Col, Container, Row} from "reactstrap";
 import Crumbs from "./components/layout/breadcrumbs/Crumbs.jsx";
+import Menu from "./components/layout/menu/Menu.jsx";
 
+
+const routes = [
+    { path: '/', element: <Login /> },
+    { path: '/dashboard', element: <Dash /> },
+    { path: '/spaces', element: <Spaces />}
+    // { path: '/bookings', element: <Bookings /> },
+]
 function App() {
 
     const router = createBrowserRouter(
-        [
-            { path: '/', element: <Login /> },
-            { path: '/dashboard', element: <Dash /> },
-            { path: '/spaces', element: <Spaces />}
-            // { path: '/bookings', element: <Bookings /> },
-        ]
+        routes?.map((route) => {
+            return { ...route, element: <>
+                    <Crumbs crumbs={[{name: "Dashboard"}, {name: "Dashboard2"}]} />
+                    <Container fluid className="position-relative content">
+                        {route.element}
+                    </Container>
+                </> }
+        })
     )
 
   return (
       <Container fluid>
           <Row>
-              <Col md="2" className="bg-primary position-sticky">
-                  <h1 className="text-white">EICT Spaces</h1>
-              </Col>
+            <Menu />
             <Col className="p-0 vh-100 overflow-scroll">
-                <Crumbs crumbs={[{name: "Dashboard"}, {name: "Dashboard2"}]} />
-                <Container fluid>
-                    <RouterProvider router={router} />
-                </Container>
+                <RouterProvider router={router} />
                 <Footer />
             </Col>
           </Row>
