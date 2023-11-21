@@ -11,15 +11,18 @@ import Menu from "./components/layout/menu/Menu.jsx";
 
 
 const routes = [
-    { path: '/', element: <Login />, icon: 'HouseFill', name: 'Login'},
-    { path: '/dashboard', element: <Dash />, icon: 'HouseFill', name: 'Dashboard' },
-    { path: '/spaces', element: <Spaces />, icon: 'ClockFill', name: 'Spaces' },
+    { path: '/', element: <Login />, icon: 'HouseFill', name: 'Login', layout: 'blank' },
+    { path: '/dashboard', element: <Dash />, icon: 'HouseFill', name: 'Dashboard', layout: 'default' },
+    { path: '/spaces', element: <Spaces />, icon: 'ClockFill', name: 'Spaces', layout: 'default' },
     // { path: '/bookings', element: <Bookings /> },
 ]
 function App() {
 
     const router = createBrowserRouter(
         routes?.map((route) => {
+            if (route.layout === 'blank') {
+                return route
+            }
             return { ...route, element: <>
                     <Menu items={routes}/>
                     <Col xs="12" lg="10" className="p-0 vh-100 overflow-scroll">
