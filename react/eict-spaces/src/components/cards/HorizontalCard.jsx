@@ -61,7 +61,7 @@ const HorizontalCard = ({ nombreSalon, profilePic, person, image, reason, userAd
                     
                     </ModalBody>
                     <ModalFooter>
-                    <Button color="secondary" onClick={toggle} className="btn btn-outline-success">
+                    <Button color="secondary" onClick={toggle} className="btn botonCancelar">
                         Cancelar mi reserva
                     </Button>
                     </ModalFooter>
@@ -95,10 +95,10 @@ const HorizontalCard = ({ nombreSalon, profilePic, person, image, reason, userAd
                     
                     </ModalBody>
                     <ModalFooter>
-                    <Button color="primary" onClick={toggle2} className="btn btn-secondary">
+                    <Button color="primary" onClick={toggle2} className="btn botonCancelar">
                         Rechazar
                     </Button>{' '}
-                    <Button color="secondary" onClick={toggle2} className="btn btn-outline-success">
+                    <Button color="secondary" onClick={toggle2} className="btn btn-outline-success botonAceptar">
                         Aceptar
                     </Button>
                     </ModalFooter>

@@ -5,10 +5,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.card-first{
-    max-width: 100%;
-    height: 120px;
-    margin: 40px 20px 20px 100px;
+.hori-card{
+    width: 100%;
+    background-color: white !important;
+    border-color: white !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    flex-direction: column !important;
 }
 
 .card{
@@ -34,40 +37,26 @@
     border-radius: 10px;
 }
 
-.modal h6{
-    color: grey;
-    font-size: 12px;
-}
-.modal h5{
-    color: black;
-}
-
-.modal h4{
-    color: black;
-}
-
-.modal li{
-    color: black;
-}
-
-.btn-secondary{ /*boton de rechazar*/
-    background-color: white;
-    color:#920029;
-    border: none;
-}
-
-.btn-primary{ /*boton de aceptar*/
-    background-color: white;
-    color:#00504D;
-    border-radius: 80%;
-    border-color: black;
-}
-
-.hori-card{
-    width: 100%;
+.botonCancelar{
     background-color: white !important;
-    border-color: white !important;
-    padding: 0px !important;
-    margin: 0px !important;
-    flex-direction: column !important;
+    color:#920029 !important;
+    border-color: #920029 !important;
+}
+
+.botonCancelar:hover{
+    background-color: #920029 !important;
+    color:white !important;
+    border-color: #920029 !important;
+}
+
+.botonAceptar{
+    background-color: white !important;
+    color:#00504D !important;
+    border-color: #00504D !important;
+}
+
+.botonAceptar:hover{
+    background-color: #00504D !important;
+    color:white !important;
+    border-color: #00504D !important;
 }

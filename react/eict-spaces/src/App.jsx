@@ -38,6 +38,13 @@ const routes = [
         name: 'Edit Space',
         layout: 'default',
         hidden: true
+    },
+    {
+        path: '/dashboard/bookings',
+        element: <Bookings />,
+        name: 'Bookings',
+        layout: 'default',
+        hidden: true
     }
 ]
 function App() {
