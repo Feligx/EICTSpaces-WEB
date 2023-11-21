@@ -1,8 +1,17 @@
 .crumbs {
-    position: absolute;
+    /*position: absolute;*/
     z-index: 2;
     background-color: white;
-    width: 100%;
+    /*width: 100%;*/
     min-height: 3.45rem;
-    box-shadow: 0 4px 24px 0 rgba(34,41,47,.1);;
+    box-shadow: 0 4px 24px 0 rgba(34,41,47,.1);
+    left: 16.66666667%;
+}
+
+/*media query to make left 0 on screens smaller than lg*/
+
+@media (max-width: 1199.98px) {
+    .crumbs {
+        left: 0;
+    }
 }

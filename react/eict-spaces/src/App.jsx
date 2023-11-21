@@ -11,9 +11,9 @@ import Menu from "./components/layout/menu/Menu.jsx";
 
 
 const routes = [
-    { path: '/', element: <Login /> },
-    { path: '/dashboard', element: <Dash /> },
-    { path: '/spaces', element: <Spaces />}
+    { path: '/', element: <Login />, icon: 'HouseFill', name: 'Login'},
+    { path: '/dashboard', element: <Dash />, icon: 'HouseFill', name: 'Dashboard' },
+    { path: '/spaces', element: <Spaces />, icon: 'ClockFill', name: 'Spaces' },
     // { path: '/bookings', element: <Bookings /> },
 ]
 function App() {
@@ -21,22 +21,23 @@ function App() {
     const router = createBrowserRouter(
         routes?.map((route) => {
             return { ...route, element: <>
-                    <Crumbs crumbs={[{name: "Dashboard"}, {name: "Dashboard2"}]} />
-                    <Container fluid className="position-relative content">
-                        {route.element}
-                    </Container>
-                </> }
+                    <Menu items={routes}/>
+                    <Col xs="12" lg="10" className="p-0 vh-100 overflow-scroll">
+                        <Crumbs crumbs={[{name: "Dashboard"}, {name: "Dashboard2"}]} />
+                        <Container fluid className="position-relative content">
+                            {route.element}
+                        </Container>
+                        <Footer />
+                    </Col>
+                </>
+            }
         })
     )
 
   return (
       <Container fluid>
           <Row>
-            <Menu />
-            <Col className="p-0 vh-100 overflow-scroll">
                 <RouterProvider router={router} />
-                <Footer />
-            </Col>
           </Row>
       </Container>
   )
