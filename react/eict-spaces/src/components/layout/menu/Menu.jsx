@@ -27,7 +27,7 @@ const Menu = ({items}) => {
                 <Nav pills vertical className="d-none d-lg-flex">
                     {
                         items?.map((item, index) => {
-                                if (item.path !== "/") {
+                                if (item.path !== "/" && !item?.hidden) {
                                     return (
                                         <MenuButton key={index} text={item.name} iconName={item.icon} iconSize={24} to={item.path} />
                                     )

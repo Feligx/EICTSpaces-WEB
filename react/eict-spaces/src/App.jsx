@@ -11,10 +11,33 @@ import Menu from "./components/layout/menu/Menu.jsx";
 
 
 const routes = [
-    { path: '/', element: <Login />, icon: 'HouseFill', name: 'Login', layout: 'blank' },
-    { path: '/dashboard', element: <Dash />, icon: 'HouseFill', name: 'Dashboard', layout: 'default' },
-    { path: '/spaces', element: <Spaces />, icon: 'ClockFill', name: 'Spaces', layout: 'default' },
-    // { path: '/bookings', element: <Bookings /> },
+    {
+        path: '/',
+        element: <Login />,
+        icon: 'HouseFill',
+        name: 'Login',
+        layout: 'blank'
+    },
+    {
+        path: '/dashboard',
+        element: <Dash />, icon: 'HouseFill',
+        name: 'Dashboard',
+        layout: 'default'
+    },
+    {
+        path: '/dashboard/spaces/create',
+        element: <Spaces edit={false} />,
+        name: 'New Space',
+        layout: 'default',
+        hidden: true
+    },
+    {
+        path: '/dashboard/spaces/:id',
+        element: <Spaces edit />,
+        name: 'Edit Space',
+        layout: 'default',
+        hidden: true
+    }
 ]
 function App() {
 
