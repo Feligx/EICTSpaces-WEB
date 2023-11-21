@@ -2,7 +2,7 @@ import { Card, Button, CardImg, CardText, CardTitle, Col, Row, Modal, ModalHeade
 import './HorizontalCard.css'
 import {useState} from "react";
 
-const HorizontalCard = ({ nombreSalon, profilePic, person, image, reason, userAdmin, active }) => {//userAdmin es un booleano que indica si el usuario es admin o no para las modales
+const HorizontalCard = ({ nombreSalon, profilePic, person, image, reason, userAdmin, active, id, setBookings }) => {//userAdmin es un booleano que indica si el usuario es admin o no para las modales
     const [modal, setModal] = useState(false);
     const [modal2, setModal2] = useState(false);
     const toggle = () => setModal(!modal);
@@ -10,8 +10,12 @@ const HorizontalCard = ({ nombreSalon, profilePic, person, image, reason, userAd
     let togs = userAdmin==true ? toggle : toggle2
 
     function handleActive() {
-        active = false;
-        console.log("Se ejecuto la funcion handleActive");
+       setBookings(prevState => prevState.map(booking => {
+            if (booking.id == id) {
+                booking.active = false;
+            }
+            return booking;
+        }))
     }
     return (
         <>
@@ -66,7 +70,11 @@ const HorizontalCard = ({ nombreSalon, profilePic, person, image, reason, userAd
                     
                     </ModalBody>
                     <ModalFooter>
-                    <Button color="secondary" onClick={handleActive} className="btn botonCancelar"> 
+                    <Button color="secondary" onClick={event=>{
+                            toggle2();
+                            handleActive();
+
+                    } } className="btn botonCancelar"> 
                         Cancelar mi reserva
                     </Button>
                     </ModalFooter>
@@ -95,18 +103,22 @@ const HorizontalCard = ({ nombreSalon, profilePic, person, image, reason, userAd
                             8/1/24, 7:00 am - 9:00 am
                         </li>
                         </ul>
-
                         <h6>Pido uso del salon Lovelace con el fin de poder adelantar mi proyecto de la clase de programación de computadores </h6>
                     
                     </ModalBody>
                     <ModalFooter>
                     <Button color="primary" onClick={event=>{
-                            toggle2;
-                            handleActive;
+                            toggle2();
+                            handleActive();
+
                     } } className="btn botonCancelar">
                         Rechazar
                     </Button>{' '}
-                    <Button color="secondary" onClick={handleActive} className="btn btn-outline-success botonAceptar">
+                    <Button color="secondary" onClick={event=>{
+                            toggle2();
+                            handleActive();
+
+                    } } className="btn btn-outline-success botonAceptar">
                         Aceptar
                     </Button>
                     </ModalFooter>
