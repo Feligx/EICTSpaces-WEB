@@ -2,12 +2,17 @@ import { Card, Button, CardImg, CardText, CardTitle, Col, Row, Modal, ModalHeade
 import './HorizontalCard.css'
 import {useState} from "react";
 
-const HorizontalCard = ({ nombreSalon, profilePic, person, image, reason, userAdmin }) => {//userAdmin es un booleano que indica si el usuario es admin o no para las modales
+const HorizontalCard = ({ nombreSalon, profilePic, person, image, reason, userAdmin, active }) => {//userAdmin es un booleano que indica si el usuario es admin o no para las modales
     const [modal, setModal] = useState(false);
     const [modal2, setModal2] = useState(false);
     const toggle = () => setModal(!modal);
     const toggle2 = () => setModal2(!modal2);
     let togs = userAdmin==true ? toggle : toggle2
+
+    function handleActive() {
+        active = false;
+        console.log("Se ejecuto la funcion handleActive");
+    }
     return (
         <>
             <Button onClick = {togs}  className="w-100 hori-card no-gutters"> 
@@ -61,7 +66,7 @@ const HorizontalCard = ({ nombreSalon, profilePic, person, image, reason, userAd
                     
                     </ModalBody>
                     <ModalFooter>
-                    <Button color="secondary" onClick={toggle} className="btn botonCancelar">
+                    <Button color="secondary" onClick={handleActive} className="btn botonCancelar"> 
                         Cancelar mi reserva
                     </Button>
                     </ModalFooter>
@@ -95,10 +100,13 @@ const HorizontalCard = ({ nombreSalon, profilePic, person, image, reason, userAd
                     
                     </ModalBody>
                     <ModalFooter>
-                    <Button color="primary" onClick={toggle2} className="btn botonCancelar">
+                    <Button color="primary" onClick={event=>{
+                            toggle2;
+                            handleActive;
+                    } } className="btn botonCancelar">
                         Rechazar
                     </Button>{' '}
-                    <Button color="secondary" onClick={toggle2} className="btn btn-outline-success botonAceptar">
+                    <Button color="secondary" onClick={handleActive} className="btn btn-outline-success botonAceptar">
                         Aceptar
                     </Button>
                     </ModalFooter>
