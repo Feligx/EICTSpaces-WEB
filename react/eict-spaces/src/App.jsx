@@ -19,7 +19,14 @@ const routes = [
 function App() {
 
     const router = createBrowserRouter(
-        routes?.map((route) => {
+        routes?.map((r) => {
+            const errorElement = <h1>404</h1>
+
+            const route = {
+                ...r,
+                errorElement
+            }
+
             if (route.layout === 'blank') {
                 return route
             }

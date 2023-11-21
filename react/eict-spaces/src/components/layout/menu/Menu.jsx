@@ -29,7 +29,7 @@ const Menu = ({items}) => {
                         items?.map((item, index) => {
                                 if (item.path !== "/") {
                                     return (
-                                        <MenuButton text={item.name} iconName={item.icon} iconSize={24} to={item.path} />
+                                        <MenuButton key={index} text={item.name} iconName={item.icon} iconSize={24} to={item.path} />
                                     )
                                 }
                             }
@@ -69,7 +69,7 @@ const Menu = ({items}) => {
                             items?.map((item, index) => {
                                     if (item.path !== "/") {
                                         return (
-                                            <MenuButton text={item.name} iconName={item.icon} iconSize={24} to={item.path} />
+                                            <MenuButton key={index} text={item.name} iconName={item.icon} iconSize={24} to={item.path} />
                                         )
                                     }
                                 }
