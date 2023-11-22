@@ -3,7 +3,7 @@ import './InformationCard.css'
 
 const InformationCard = ({ icon, info, value }) => {
     return (
-        <Card className="ca">
+        <Card className="ca-i">
             <CardBody>
                 <div className="d-flex align-items-center">
                     {icon}
