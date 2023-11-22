@@ -3,7 +3,8 @@ import Dash from './views/dashboard/Dash'
 import Login from "./views/login/Login.jsx"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import Spaces from "./views/spaces/Spaces.jsx";
+import Profile from "./views/profile/Profile.jsx";
+// import Spaces from "./views/spaces/Spaces.jsx";
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
         [
             { path: '/', element: <Login /> },
             { path: '/dashboard', element: <Dash /> },
+            { path: '/profile', element: <Profile /> },
             // { path: '/bookings', element: <Bookings /> },
         ]
     )
@@ -18,10 +20,8 @@ function App() {
   return (
       <>
       {/*<Sidebar />*/}
-      <div>
           {/*<Crumbs/>*/}
         <RouterProvider router={router} />
-      </div>
       {/*<Footer/>*/}
       </>
   )
