@@ -1,0 +1,15 @@
+.env {
+    width: 5rem !important;
+    height: 3rem;
+}
+
+.ca2 {
+    box-shadow: 0px 5px 7px #837878;
+    width: 35rem; 
+    height: 41rem !important;
+}
+
+.c_img3 {
+    height: 50%;
+    object-fit: cover;
+}
