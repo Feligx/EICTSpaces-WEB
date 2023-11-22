@@ -74,7 +74,7 @@ function App() {
                     <Menu items={routes}/>
                     <Col xs="12" lg="10" className="p-0 vh-100 overflow-scroll">
                         <Crumbs crumbs={[{name: "Dashboard"}, {name: "Dashboard2"}]} />
-                        <Container fluid className="position-relative content">
+                        <Container fluid className="position-relative content pt-0">
                             {route.element}
                         </Container>
                         <Footer />
