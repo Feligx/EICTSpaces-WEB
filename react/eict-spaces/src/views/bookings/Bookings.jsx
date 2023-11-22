@@ -31,7 +31,7 @@ const books = [
         reason: "para ver bochi",
         userAdmin: true,
         active: true,
-        id : 1
+        id : 3
     },
     {
         nombreSalon: "nombreSalon",
@@ -41,7 +41,7 @@ const books = [
         reason: "para ver bochi",
         userAdmin: false,
         active: true,
-        id : 2
+        id : 4
     }
 ]
 
@@ -53,7 +53,7 @@ const Bookings = () => {
         <Col className='container d-flex flex-column'>
             <h1 className='text-center'>Mis reservas</h1>
             <div className='d-flex flex-column'>
-                {books.map((book,index) => {
+                {bookings.map((book,index) => {
                     if (book.active == false) {
                         return null;
                     }
