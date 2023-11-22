@@ -90,7 +90,7 @@ const Forms = () => {
                             />
                         </FormGroup>
                     </Form>
-                    <Row className="d-flex justify-content-end me-2">
+                    <Row className="d-flex justify-content-end me-1">
                         <Button className="bton env ml-auto">
                             Enviar
                         </Button>
