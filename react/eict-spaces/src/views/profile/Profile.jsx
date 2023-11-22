@@ -1,11 +1,19 @@
-import {Button, Col, Modal, ModalFooter, ModalHeader, Row} from "reactstrap";
-import {Envelope, Power, Telephone} from "react-bootstrap-icons";
+import {Button, Col, Modal, ModalFooter, ModalHeader, Offcanvas, OffcanvasBody, OffcanvasHeader, Row} from "reactstrap";
+import {Envelope, Funnel, Power, Telephone} from "react-bootstrap-icons";
 import './Profile.css'
 import InformationCard from "../../components/cards/InformationCard.jsx";
 import {useState} from "react";
+import Form from "react-bootstrap/Form";
+
+
+
+
 const Profile = ({name="John Doe"}) => {
     const [modal, setModal] = useState(false);
-    const toggle = () => setModal(!modal);
+    const toggleModal = () => setModal(!modal);
+
+    const [showOffcanvas, setShowOffcanvas] = useState(false);
+    const toggleOffcanvas = () => setShowOffcanvas(!showOffcanvas);
 
     return (
         <Row className="d-flex align-items-start vh-100 w-100 align-content-between">
@@ -27,19 +35,49 @@ const Profile = ({name="John Doe"}) => {
                 </Row>
             </div>
             <div className="d-flex mb-5">
-                <Button color="danger" className="rounded-pill mt-5 align-self-end" onClick={toggle}>
+                <Button color="danger" className="rounded-pill mt-5 align-self-end" onClick={toggleModal}>
                 <span className="fs-5 me-3">
                     <Power/>
                     Borrar cuenta
                 </span>
                 </Button>
-                <Modal isOpen={modal} toggle={toggle}>
-                    <ModalHeader className="modal-title" toggle={toggle} close={()=>null}> <h1>¿Esta seguro de eliminar su cuenta?</h1></ModalHeader>
+                <Modal isOpen={modal} toggle={toggleModal}>
+                    <ModalHeader className="modal-title" toggle={toggleModal} close={()=>null}> <h1>¿Esta seguro de eliminar su cuenta?</h1></ModalHeader>
                     <ModalFooter>
-                        <Button color="danger" onClick={toggle}>Eliminar</Button>{' '}
-                        <Button color="secondary" onClick={toggle}>Cancelar</Button>
+                        <Button color="danger" onClick={toggleModal}>Eliminar</Button>{' '}
+                        <Button color="secondary" onClick={toggleModal}>Cancelar</Button>
                     </ModalFooter>
                 </Modal>
+
+                <Button
+                    color="primary"
+                    onClick={toggleOffcanvas}
+                >
+                    Open
+                </Button>
+
+                <Offcanvas isOpen={showOffcanvas} toggle={toggleOffcanvas} direction="end" className='filter'>
+                    <OffcanvasHeader toggle={toggleOffcanvas}>
+                        <Funnel/> Filtros
+                    </OffcanvasHeader>
+                    <OffcanvasBody >
+                        <Form.Label> Capacidad </Form.Label>
+                        <Form.Range />
+                        <Form.Label> Equipos de computo </Form.Label>
+                        <Form.Range />
+
+                        <Form.Label> Tipo de salon </Form.Label>
+                        <Form.Select aria-label="Default select example" className='dropdown'>
+                            <option>Seleccione un tipo</option>
+                            <option value="1">Tipo 1</option>
+                            <option value="2">Tipo 2</option>
+                            <option value="3">Tipo 3</option>
+                        </Form.Select>
+
+                    </OffcanvasBody>
+                </Offcanvas>
+
+
             </div>
 
         </Row>
