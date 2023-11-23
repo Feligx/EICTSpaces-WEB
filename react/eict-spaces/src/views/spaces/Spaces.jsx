@@ -2,21 +2,27 @@ import './Spaces.css'
 import react_logo from '../../assets/react.svg'
 import {Button, Card, CardBody, CardHeader, CardTitle, Col, Input, InputGroup, Label, Row, Form} from "reactstrap";
 import {CloudArrowUpFill} from "react-bootstrap-icons";
-import {useRef} from "react";
+import {useRef, useState, useEffect} from "react";
 import {Link} from "react-router-dom";
 import { useForm, Controller } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 
 const Spaces = ({edit = false}) => {
     const fileRef = useRef()
     const navigate = useNavigate()
+    const [filePreview, setFilePreview] = useState()
 
     const handleFileClick = () => {
         fileRef.current?.click();
     }
 
-    const { handleSubmit, control, formState: {errors} } = useForm({
+    const { 
+        handleSubmit, 
+        control,
+        reset, 
+        formState: {errors},
+        getValues
+    } = useForm({
         defaultValues: {
             "file": "",
             "space_name": "Espacio 1",
@@ -29,16 +35,42 @@ const Spaces = ({edit = false}) => {
         }
     })
 
+    const handleFileChange = (e) => {
+        const file = e.target.files[0];
+    
+        if (file) {
+          const reader = new FileReader();
+    
+          reader.onloadend = () => {
+            setFilePreview(reader.result);
+          };
+    
+          reader.readAsDataURL(file);
+        }
+    }
+
     const onSubmit = (data) => {
         console.log(data)
-        navigate("/dashboard")
+        //navigate("/dashboard")
     }
 
     useEffect(() => {
         if (!!!edit) {
             console.log("should leave form empty")
+            reset({
+                "file": "",
+                "space_name": "",
+                "devices": "",
+                "location": "",
+                "area": "",
+                "capacity": "",
+                "type": "",
+                "description": ""
+            })
         }
     }, [])
+
+    console.log(errors)
 
     return (
         <Card>
@@ -47,7 +79,7 @@ const Spaces = ({edit = false}) => {
                     {edit ? 'Editar espacio' : 'Nuevo espacio'}
                 </CardTitle>
             </CardHeader>
-            <CardBody tag={Form} onSubmit={handleSubmit(onSubmit)}>
+            <CardBody tag={Form} id='space-form' onSubmit={handleSubmit(onSubmit)}>
                 <Row className="my-4">
                     <Col md="3" className="my-2 my-lg-0 ">
                         <Controller
@@ -56,8 +88,25 @@ const Spaces = ({edit = false}) => {
                             rules={{ required: true }}
                             render={({field})=> (
                                 <InputGroup onClick={handleFileClick} className="rounded bg-light h-100 d-flex justify-content-center align-items-center">
-                                    <Input disabled={edit} type="file" name="file" id="file" className="d-none" innerRef={fileRef} {...field}/>
-                                    <CloudArrowUpFill className="text-muted" size="128"/>
+                                    <Input 
+                                        disabled={edit} 
+                                        type="file" 
+                                        name="file" 
+                                        id="file" 
+                                        className="d-none" 
+                                        innerRef={(ref) => {
+                                            field.ref(ref)
+                                            fileRef.current = ref
+                                        }}
+                                        onChange={
+                                            (e) => {
+                                                handleFileChange(e)
+                                                field.onChange(e)
+                                            }
+                                        } 
+                                        {...field}
+                                    />
+                                    {filePreview ? <img src={filePreview}/> : <CloudArrowUpFill className="text-muted" size="128"/> }
                                 </InputGroup>       
                             )}
                         />
@@ -73,7 +122,7 @@ const Spaces = ({edit = false}) => {
                                         ({field}) => (
                                             <>
                                                 <Label for="space_name" tag="small" className="text-muted">Nombre</Label>
-                                                <Input disabled={edit} name="space_name" id="space_name" type="text"/>
+                                                <Input disabled={edit} name="space_name" id="space_name" type="text" {...field} />
                                             </>            
                                         )
                                     }
@@ -101,7 +150,7 @@ const Spaces = ({edit = false}) => {
                                         ({field}) => (
                                             <>
                                                 <Label for="location" tag="small" className="text-muted">Ubicación</Label>
-                                                <Input disabled={edit} name="location" id="location" type="text"/>
+                                                <Input disabled={edit} name="location" id="location" type="text" {...field}/>
                                             </>
                                         )
                                     }
@@ -114,7 +163,7 @@ const Spaces = ({edit = false}) => {
                                         ({field}) => (
                                             <>
                                                 <Label for="area" tag="small" className="text-muted">Área</Label>
-                                                <Input disabled={edit} name="area" id="area" type="text"/>
+                                                <Input disabled={edit} name="area" id="area" type="text" {...field}/>
                                             </>
                                         )
                                     }
@@ -129,7 +178,7 @@ const Spaces = ({edit = false}) => {
                                         ({field}) => (
                                             <>
                                                 <Label for="capacity" tag="small" className="text-muted">Capacidad</Label>
-                                                <Input disabled={edit} name="capacity" id="capacity" type="text"/>
+                                                <Input disabled={edit} name="capacity" id="capacity" type="text" {...field}/>
                                             </>
                                         )
                                     }
@@ -142,7 +191,7 @@ const Spaces = ({edit = false}) => {
                                         ({field}) => (
                                             <>
                                                 <Label for="type" tag="small" className="text-muted">Tipo</Label>
-                                                <Input disabled={edit} name="type" id="type" type="text"/>
+                                                <Input disabled={edit} name="type" id="type" type="text" {...field}/>
                                             </>
                                         )
                                     }
@@ -159,7 +208,7 @@ const Spaces = ({edit = false}) => {
                                         ({field}) => (
                                             <>
                                                 <Label for="description" tag="small" className="text-muted">Descripción</Label>
-                                                <Input disabled={edit} type="text" name="description" id="description" />
+                                                <Input disabled={edit} type="text" name="description" id="description" {...field}/>
                                             </>
                                         )
                                     }
@@ -172,7 +221,7 @@ const Spaces = ({edit = false}) => {
                     <Button type="button" tag={Link} color="danger rounded-pill me-2" outline to={-1}>
                         Cancelar
                     </Button>
-                    <Button type="submit" color="success rounded-pill">
+                    <Button type="submit" form='space-form' color="success rounded-pill" onClick={handleSubmit(onSubmit)}>
                         Guardar
                     </Button>
                 </div>

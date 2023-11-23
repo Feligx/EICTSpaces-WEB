@@ -2,6 +2,8 @@ import './App.css'
 import Dash from './views/dashboard/Dash'
 import Bookings from './views/bookings/Bookings'
 import Login from "./views/login/Login.jsx"
+import Forms from "./views/form/Forms.jsx"
+import Profile from "./views/profile/Profile.jsx"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Spaces from "./views/spaces/Spaces.jsx";
@@ -18,6 +20,21 @@ const routes = [
         icon: 'HouseFill',
         name: 'Login',
         layout: 'blank'
+    },
+    {
+        path: '/forms',
+        element: <Forms />,
+        name: 'Formulario',
+        layout: 'default',
+        hidden: true
+    },
+    {
+        path: '/profile',
+        element: <Profile />,
+        name: 'Perfil',
+        icon: 'name',
+        layout: 'default',
+        hidden: true,
     },
     {
         path: '/dashboard',
@@ -65,7 +82,7 @@ function App() {
                     <Menu items={routes}/>
                     <Col xs="12" lg="10" className="p-0 vh-100 overflow-scroll">
                         <Crumbs crumbs={[{name: "Dashboard"}, {name: "Dashboard2"}]} />
-                        <Container fluid className="position-relative content">
+                        <Container fluid className="position-relative content pt-0">
                             {route.element}
                         </Container>
                         <Footer />
