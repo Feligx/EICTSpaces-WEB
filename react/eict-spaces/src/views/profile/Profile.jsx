@@ -44,13 +44,6 @@ const Profile = ({name="John Doe"}) => {
                     </ModalFooter>
                 </Modal>
 
-                <Button
-                    color="primary"
-                    onClick={toggleOffcanvas}
-                >
-                    Open
-                </Button>
-
 
             </div>
 
