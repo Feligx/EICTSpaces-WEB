@@ -16,7 +16,7 @@ const VerticalCard = ({ title, place, people, pc, image }) => {
             <Card className="ca rounded-3 px-0 py-0 link btn-link me-4 ms-5" tag={Button} onClick={toggle}>
                 <CardImg src={image} className="c_img card-img-top rounded-3"></CardImg>
                 <CardBody className="ms-3">
-                    <CardText className="fs-2 text-dark-blue">{title}</CardText>
+                    <CardText className="fs-3 text-dark-blue">{title}</CardText>
                     <CardText className="mt-0 text-dark-blue">{place}</CardText>
                     <CardStat className="text-dark-blue" people={people} pc={pc} />
                 </CardBody>
