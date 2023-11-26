@@ -45,14 +45,31 @@ const SearchBar = () => {
                     <Form>
                         <FormGroup>
                             <Label for="capacidad">Capacidad</Label>
-                            <Input type="range" id="capacidad" />
+                            <Input type="range" id="capacidad" min="0" max="27" step="1" list="values"/>
+                            <datalist className="d-flex justify-content-between w-100" id="values">
+                                <option value="0" label="0" />
+                                <option className="text-end" value="27" label="27" />
+                            </datalist>
+
                         </FormGroup>
 
                         <FormGroup>
                             <Label for="equipos">Equipos de computo</Label>
-                            <Input type="range" id="equipos" />
+                            <Input type="range" id="equipos" min="0" max="27" step="1" list="values-" />
+                            <datalist className="d-flex justify-content-between w-100" id="values">
+                                <option value="0" label="0" />
+                                <option className="text-end" value="27" label="27" />
+                            </datalist>
                         </FormGroup>
-                        
+
+                        <FormGroup>
+                            <Label for="tipo">Tipo de espacio</Label>
+                            <Input type="select" name="select" id="tipo">
+                                <option>Docencia</option>
+                                <option>Experimentación</option>
+                                <option>Investigación</option>
+                            </Input>
+                        </FormGroup>
 
                     </Form>
                 </OffcanvasBody>
