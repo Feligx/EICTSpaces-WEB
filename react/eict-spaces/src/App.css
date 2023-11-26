@@ -15,3 +15,7 @@
     min-height: calc(100% - 3.5rem);
     padding-top: 5rem;
 }
+
+.text-dark-blue {
+    color: #213547 !important;
+  }

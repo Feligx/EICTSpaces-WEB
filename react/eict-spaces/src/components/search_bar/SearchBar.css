@@ -17,5 +17,6 @@
 
 .bton {
     background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
     height: 2.5rem;
 }

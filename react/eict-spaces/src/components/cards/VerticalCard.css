@@ -26,4 +26,9 @@
     height: 21rem !important;
     background-color: white !important;
     border-color: white !important;
+    text-decoration: none !important;
+}
+
+.link:hover {
+    color: #213547 !important;
 }
