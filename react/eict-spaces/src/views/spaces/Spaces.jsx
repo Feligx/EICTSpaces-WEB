@@ -6,6 +6,11 @@ import {useRef, useState, useEffect} from "react";
 import {Link} from "react-router-dom";
 import { useForm, Controller } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+
+const MySwal = withReactContent(Swal)
 
 const Spaces = ({edit = false}) => {
     const fileRef = useRef()
@@ -14,6 +19,14 @@ const Spaces = ({edit = false}) => {
 
     const handleFileClick = () => {
         fileRef.current?.click();
+    }
+
+    function showSuccess() {
+        MySwal.fire({
+            title: "Espacio guardado",
+            text: "",
+            icon: "success"
+        })
     }
 
     const { 
@@ -51,7 +64,8 @@ const Spaces = ({edit = false}) => {
 
     const onSubmit = (data) => {
         console.log(data)
-        //navigate("/dashboard")
+        showSuccess()
+        navigate("/dashboard")
     }
 
     useEffect(() => {

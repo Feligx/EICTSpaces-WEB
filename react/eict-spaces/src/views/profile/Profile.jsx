@@ -38,7 +38,7 @@ const Profile = ({name="John Doe"}) => {
                 </span>
                 </Button>
                 <Modal isOpen={modal} toggle={toggleModal}>
-                    <ModalHeader className="modal-title" toggle={toggleModal} close={()=>null}> <h1>¿Esta seguro de eliminar su cuenta?</h1></ModalHeader>
+                    <ModalHeader className="modal-title" toggle={toggleModal} tag="h1"> ¿Esta seguro de eliminar su cuenta?</ModalHeader>
                     <ModalFooter>
                         <Button color="danger" tag={Link} to="/">Eliminar</Button>{' '}
                         <Button color="secondary" onClick={toggleModal}>Cancelar</Button>

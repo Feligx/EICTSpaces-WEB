@@ -2,6 +2,7 @@ import HorizontalCard from '../../components/cards/HorizontalCard'
 import { Col } from 'reactstrap'
 import {useState} from "react";
 
+
 const books = [
     {
         nombreSalon: "nombreSalon",

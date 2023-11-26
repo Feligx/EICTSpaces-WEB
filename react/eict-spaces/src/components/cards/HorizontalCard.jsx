@@ -1,6 +1,11 @@
 import { Card, Button, CardImg, CardText, CardTitle, Col, Row, Modal, ModalHeader, ModalFooter, ModalBody } from "reactstrap"
 import './HorizontalCard.css'
 import { useState } from "react";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+
+const MySwal = withReactContent(Swal)
 
 const HorizontalCard = ({ nombreSalon, profilePic, person, image, reason, userAdmin, active, id, setBookings}) => {//userAdmin es un booleano que indica si el usuario es admin o no para las modales
     const [modal, setModal] = useState(false);
@@ -17,6 +22,23 @@ const HorizontalCard = ({ nombreSalon, profilePic, person, image, reason, userAd
             return booking;
         }))
     }
+
+    function showSuccess() {
+        MySwal.fire({
+            title: "Cancelado exitosamente",
+            text: "",
+            icon: "success"
+        })
+    }
+
+    function showSuccessTactico() {
+        MySwal.fire({
+            title: "Rechazo exitoso",
+            text: "",
+            icon: "success"
+        })
+    }
+
     return (
         <>
             <Card className="card d-flex mx-0" tag={Button} onClick={togs}>
@@ -74,6 +96,7 @@ const HorizontalCard = ({ nombreSalon, profilePic, person, image, reason, userAd
                         <Button color="secondary" onClick={event => {
                             toggle2();
                             handleActive();
+                            showSuccess();
 
                         }} className="btn botonCancelar">
                             Cancelar mi reserva
@@ -111,6 +134,7 @@ const HorizontalCard = ({ nombreSalon, profilePic, person, image, reason, userAd
                         <Button color="primary" onClick={event => {
                             toggle2();
                             handleActive();
+                            showSuccessTactico();
 
                         }} className="btn botonCancelar">
                             Rechazar

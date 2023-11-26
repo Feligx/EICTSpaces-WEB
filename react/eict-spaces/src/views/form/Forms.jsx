@@ -4,8 +4,22 @@ import { Card, CardBody, CardImg, CardText } from "reactstrap"
 import './Form.css'
 import { LifePreserver } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
+
+const MySwal = withReactContent(Swal)
 const Forms = () => {
+
+    function showSuccess() {
+        MySwal.fire({
+            title: "Reserva exitosa",
+            text: "",
+            icon: "success"
+        })
+    }
+
+
     return (
         <>
             <Row className="d-flex align-items-center mt-5">
@@ -93,7 +107,7 @@ const Forms = () => {
                         </FormGroup>
                     </Form>
                     <Row className="d-flex justify-content-end me-1">
-                        <Button className="bton env ml-auto" tag={Link} to="/dashboard">
+                        <Button className="bton env ml-auto" tag={Link} to="/dashboard" onClick={showSuccess}>
                             Enviar
                         </Button>
                     </Row>

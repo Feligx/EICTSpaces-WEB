@@ -15,7 +15,7 @@ import {
 import { Search, Funnel, PlusLg } from 'react-bootstrap-icons'
 import {useState} from "react";
 
-const SearchBar = (setSpaces, defaultSpaces) => {
+const SearchBar = ({setSpaces, defaultSpaces}) => {
     const [showOffcanvas, setShowOffcanvas] = useState(false);
     const toggleOffcanvas = () => setShowOffcanvas(!showOffcanvas);
 
@@ -27,6 +27,7 @@ const SearchBar = (setSpaces, defaultSpaces) => {
     // console.log(currentEquip)
     // console.log(currentType)
 
+    //estoy esperando 
 
 
     return (
@@ -58,8 +59,8 @@ const SearchBar = (setSpaces, defaultSpaces) => {
                             <Input type="number" id="equipos" min="0" max="27" step="1" defaultValue="0" onChange={(e) => {
                                 // setCurrentCap(e.target.value)+
                                 setSpaces((spaces) => {
-                                    return spaces.filter((space) => {
-                                        return space.people >= e.target.value
+                                    return defaultSpaces.filter((space) => {
+                                        return space.people >= parseInt(e.target.value)
                                     })
                                 })
                                 e.preventDefault()
@@ -72,8 +73,9 @@ const SearchBar = (setSpaces, defaultSpaces) => {
                             <Input type="number" id="equipos" min="0" max="27" step="1" defaultValue="0" onChange={(e) => {
 
                                 setSpaces((spaces) => {
-                                    return spaces.filter((space) => {
-                                        return space.pc >= e.target.value
+                                    
+                                    return defaultSpaces.filter((space) => {
+                                        return space.pc >= parseInt(e.target.value)
                                     })
                                 })
                                 e.preventDefault()
@@ -84,7 +86,7 @@ const SearchBar = (setSpaces, defaultSpaces) => {
                             <Label for="tipo">Tipo de espacio</Label>
                             <Input type="select" name="select" id="tipo" onChange={(e) => {
                                 setSpaces((spaces) => {
-                                    return spaces.filter((space) => {
+                                    return defaultSpaces.filter((space) => {
                                         return space.type === e.target.value
                                     })
                                 })

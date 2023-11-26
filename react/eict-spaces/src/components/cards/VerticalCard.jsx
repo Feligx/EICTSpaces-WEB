@@ -35,11 +35,11 @@ const VerticalCard = ({ title, place, people, pc, image, a, id="1" }) => {
             <Modal isOpen={modal} toggle={toggle} className="mt-5">
                 <ModalHeader toggle={toggle}>
                     {title}
-                    <span class="ms-4">
+                    <span className="ms-4">
                         <PeopleFill className='me-1' />
                         {people}
                     </span>
-                    <span class="ms-3">
+                    <span className="ms-3">
                         <LaptopFill className='me-1' />
                         {pc}
                     </span>
@@ -50,7 +50,7 @@ const VerticalCard = ({ title, place, people, pc, image, a, id="1" }) => {
                     <span>
                         Sala de cómputo
                     </span>
-                    <span class="ms-3">
+                    <span className="ms-3">
                         <GeoAltFill className="me-2" />
                         Edificio Calatrava - Piso 5
                     </span>
