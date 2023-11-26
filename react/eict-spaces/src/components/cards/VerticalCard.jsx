@@ -1,16 +1,24 @@
 import { Card, CardBody, CardImg, CardText, Button } from "reactstrap"
 import './VerticalCard.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import CardStat from "./CardStat"
 import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { LaptopFill, PeopleFill, PersonFill, GeoAltFill } from "react-bootstrap-icons"
 import { useState } from "react";
 
-const VerticalCard = ({ title, place, people, pc, image }) => {
+const VerticalCard = ({ title, place, people, pc, image, a, id="1" }) => {
 
     const [modal, setModal] = useState(false);
+    const navigate = useNavigate();
+    const toggle = () => {
+        if (a) {
+            navigate(`/dashboard/spaces/${id}`)
+        } else {
+            setModal(!modal)
+        }
+    };
 
-    const toggle = () => setModal(!modal);
+    
     return (
         <>
             <Card className="ca rounded-3 px-0 py-0 link btn-link me-4 ms-5" tag={Button} onClick={toggle}>
