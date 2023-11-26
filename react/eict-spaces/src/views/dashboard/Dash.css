@@ -15,6 +15,7 @@ datalist option {
     cursor: pointer;
 }
 .filter {
+    /*z-index: 99 !important;*/
     background-color: #001D34 !important;
     color: white !important;
     padding: 10px;
