@@ -2,7 +2,7 @@ import { Card, Button, CardImg, CardText, CardTitle, Col, Row, Modal, ModalHeade
 import './HorizontalCard.css'
 import { useState } from "react";
 
-const HorizontalCard = ({ nombreSalon, profilePic, person, image, reason, userAdmin, active, id, setBookings }) => {//userAdmin es un booleano que indica si el usuario es admin o no para las modales
+const HorizontalCard = ({ nombreSalon, profilePic, person, image, reason, userAdmin, active, id, setBookings}) => {//userAdmin es un booleano que indica si el usuario es admin o no para las modales
     const [modal, setModal] = useState(false);
     const [modal2, setModal2] = useState(false);
     const toggle = () => setModal(!modal);

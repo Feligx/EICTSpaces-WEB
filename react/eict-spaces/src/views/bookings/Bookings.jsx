@@ -9,7 +9,7 @@ const books = [
         person: "Camilo F",
         image: "../../../public/space.jpg",
         reason: "para ver bochi",
-        userAdmin: true,
+        userAdmin: a,
         active: true,
         id : 1
     },
@@ -19,7 +19,7 @@ const books = [
         person: "Camilo F",
         image: "../../../public/space.jpg",
         reason: "para ver bochi",
-        userAdmin: false,
+        userAdmin: a,
         active: true,
         id : 2
     },
@@ -29,7 +29,7 @@ const books = [
         person: "Camilo F",
         image: "../../../public/space.jpg",
         reason: "para ver bochi",
-        userAdmin: true,
+        userAdmin: a,
         active: true,
         id : 3
     },
@@ -39,7 +39,7 @@ const books = [
         person: "Camilo F",
         image: "../../../public/space.jpg",
         reason: "para ver bochi",
-        userAdmin: false,
+        userAdmin: a,
         active: true,
         id : 4
     }
