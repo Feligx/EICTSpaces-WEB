@@ -6,8 +6,8 @@ import './Form.css'
 const Forms = () => {
     return (
         <>
-            <Row className="vh-100 d-flex w-100 align-items-center">
-                <Col md='5' className="d-flex justify-content-center">
+            <Row className="d-flex align-items-center mt-5">
+                <Col md='5' className="">
                     <Card className="ca2 rounded-3 px-0 d-flex">
                         <CardImg src="https://picsum.photos/200/300" className="c_img3 card-img-top rounded-3"></CardImg>
                         <CardBody>
