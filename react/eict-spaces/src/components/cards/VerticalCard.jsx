@@ -13,19 +13,18 @@ const VerticalCard = ({ title, place, people, pc, image }) => {
     const toggle = () => setModal(!modal);
     return (
         <>
-            <Button className="link me-4 ms-5" onClick={toggle}>
-                <Card className="ca rounded-3 px-0">
-                    <CardImg src={image} className="c_img card-img-top rounded-3"></CardImg>
-                    <CardBody>
-                        <CardText className="fs-2">{title}</CardText>
-                        <CardText className="mt-0">{place}</CardText>
-                        <CardStat people={people} pc={pc} />
-                    </CardBody>
-                </Card>
-            </Button>
+            <Card className="ca rounded-3 px-0 py-0 link me-4 ms-5" tag={Button} onClick={toggle}>
+                <CardImg src={image} className="c_img card-img-top rounded-3"></CardImg>
+                <CardBody>
+                    <CardText className="fs-2">{title}</CardText>
+                    <CardText className="mt-0">{place}</CardText>
+                    <CardStat people={people} pc={pc} />
+                </CardBody>
+            </Card>
 
 
-            <Modal isOpen={modal} toggle={toggle}>
+
+            <Modal isOpen={modal} toggle={toggle} className="mt-5">
                 <ModalHeader toggle={toggle}>
                     {title}
                     <span class="ms-4">
@@ -44,7 +43,7 @@ const VerticalCard = ({ title, place, people, pc, image }) => {
                         Sala de cómputo
                     </span>
                     <span class="ms-3">
-                        <GeoAltFill className="me-2"/>
+                        <GeoAltFill className="me-2" />
                         Edificio Calatrava - Piso 5
                     </span>
                     <br></br>
