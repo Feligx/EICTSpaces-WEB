@@ -15,9 +15,19 @@ import {
 import { Search, Funnel, PlusLg } from 'react-bootstrap-icons'
 import {useState} from "react";
 
-const SearchBar = () => {
+const SearchBar = (setSpaces, defaultSpaces) => {
     const [showOffcanvas, setShowOffcanvas] = useState(false);
     const toggleOffcanvas = () => setShowOffcanvas(!showOffcanvas);
+
+    const [currentCap, setCurrentCap] = useState(0);
+    const [currentEquip, setCurrentEquip] = useState(0);
+    const [currentType, setCurrentType] = useState("Tipo de espacio");
+
+    // console.log(currentCap)
+    // console.log(currentEquip)
+    // console.log(currentType)
+
+
 
     return (
         <Row className='main_r'>
@@ -45,26 +55,41 @@ const SearchBar = () => {
                     <Form>
                         <FormGroup>
                             <Label for="capacidad">Capacidad</Label>
-                            <Input type="range" id="capacidad" min="0" max="27" step="1" list="values"/>
-                            <datalist className="d-flex justify-content-between w-100" id="values">
-                                <option value="0" label="0" />
-                                <option className="text-end" value="27" label="27" />
-                            </datalist>
+                            <Input type="number" id="equipos" min="0" max="27" step="1" defaultValue="0" onChange={(e) => {
+                                // setCurrentCap(e.target.value)+
+                                setSpaces((spaces) => {
+                                    return spaces.filter((space) => {
+                                        return space.people >= e.target.value
+                                    })
+                                })
+                                e.preventDefault()
+                            }} />
 
                         </FormGroup>
 
                         <FormGroup>
                             <Label for="equipos">Equipos de computo</Label>
-                            <Input type="range" id="equipos" min="0" max="27" step="1" list="values-" />
-                            <datalist className="d-flex justify-content-between w-100" id="values">
-                                <option value="0" label="0" />
-                                <option className="text-end" value="27" label="27" />
-                            </datalist>
+                            <Input type="number" id="equipos" min="0" max="27" step="1" defaultValue="0" onChange={(e) => {
+
+                                setSpaces((spaces) => {
+                                    return spaces.filter((space) => {
+                                        return space.pc >= e.target.value
+                                    })
+                                })
+                                e.preventDefault()
+                            } }/>
                         </FormGroup>
 
                         <FormGroup>
                             <Label for="tipo">Tipo de espacio</Label>
-                            <Input type="select" name="select" id="tipo">
+                            <Input type="select" name="select" id="tipo" onChange={(e) => {
+                                setSpaces((spaces) => {
+                                    return spaces.filter((space) => {
+                                        return space.type === e.target.value
+                                    })
+                                })
+                                e.preventDefault()
+                            } }>
                                 <option>Docencia</option>
                                 <option>Experimentación</option>
                                 <option>Investigación</option>
