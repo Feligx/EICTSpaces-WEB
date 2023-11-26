@@ -57,11 +57,11 @@ const routes = [
         hidden: true
     },
     {
-        path: '/dashboard/bookings',
+        path: '/bookings',
         element: <Bookings />,
         name: 'Bookings',
         layout: 'default',
-        hidden: true
+        icon: 'ClockFill'
     }
 ]
 function App() {

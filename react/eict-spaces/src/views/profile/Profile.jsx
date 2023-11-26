@@ -3,6 +3,7 @@ import {Envelope, Funnel, Power, Telephone} from "react-bootstrap-icons";
 import './Profile.css'
 import InformationCard from "../../components/cards/InformationCard.jsx";
 import {useState} from "react";
+import { Link } from "react-router-dom";
 
 
 
@@ -39,7 +40,7 @@ const Profile = ({name="John Doe"}) => {
                 <Modal isOpen={modal} toggle={toggleModal}>
                     <ModalHeader className="modal-title" toggle={toggleModal} close={()=>null}> <h1>¿Esta seguro de eliminar su cuenta?</h1></ModalHeader>
                     <ModalFooter>
-                        <Button color="danger" onClick={toggleModal}>Eliminar</Button>{' '}
+                        <Button color="danger" tag={Link} to="/">Eliminar</Button>{' '}
                         <Button color="secondary" onClick={toggleModal}>Cancelar</Button>
                     </ModalFooter>
                 </Modal>

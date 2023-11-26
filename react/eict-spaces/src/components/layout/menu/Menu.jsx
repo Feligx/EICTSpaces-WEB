@@ -40,7 +40,7 @@ const Menu = ({items}) => {
             <div className="ps-3 d-none d-lg-inline">
                 <div className="d-flex text-white">
                     <Avatar initials="JD" />
-                    <NavLink className="menu-item ms-1">John Doe</NavLink>
+                    <NavLink tag={Link} to="/profile" className="menu-item ms-1">John Doe</NavLink>
                 </div>
                 <div>
                     <NavLink tag={Link} to="/" className="menu-item nav-link text-white">
@@ -79,7 +79,7 @@ const Menu = ({items}) => {
                     <div className="ps-3 d-flex flex-column justify-content-end h-100">
                         <div className="d-flex text-white">
                             <Avatar initials="JD" />
-                            <NavLink className="menu-item ms-1">John Doe</NavLink>
+                            <NavLink tag={Link} to="/profile" className="menu-item ms-1">John Doe</NavLink>
                         </div>
                         <div>
                             <NavLink tag={Link} to="/" className="menu-item nav-link text-white">
