@@ -5,11 +5,12 @@
 
 .ca2 {
     box-shadow: 0px 5px 7px #837878;
-    width: 35rem; 
-    height: 41rem !important;
+    /*width: 35rem; */ 
+    min-height: 41rem !important;
 }
 
 .c_img3 {
     height: 50%;
     object-fit: cover;
+    max-height: 400px;
 }

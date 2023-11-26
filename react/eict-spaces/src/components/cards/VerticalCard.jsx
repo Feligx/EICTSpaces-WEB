@@ -57,11 +57,11 @@ const VerticalCard = ({ title, place, people, pc, image }) => {
                     culpa qui officia deserunt mollit anim id est laborum.
                 </ModalBody>
                 <ModalFooter>
-                    <Button color="secondary" onClick={toggle}>
+                    <Button color="secondary" tag={Link} to="/forms">
                         <PersonFill className='me-1' />
                         Individual
                     </Button>{' '}
-                    <Button color="secondary" onClick={toggle}>
+                    <Button color="secondary" tag={Link} to="/forms">
                         <PeopleFill className='me-1' />
                         Grupal
                     </Button>{' '}
