@@ -15,8 +15,8 @@ const Dash = () => {
                 </Col>
             </Row>
             <Row className='w-100'>
-                <VerticalCard title="EICT Spaces" place="EICT Building" people="10" pc="10" image="https://picsum.photos/200/300" />
-                <VerticalCard title="EICT Spaces" place="EICT Building" people="10" pc="10" image="https://picsum.photos/200/300" />
+                <VerticalCard title="EICT Spaces" place="EICT Building" people="10" pc="10" image="https://picsum.photos/200/300" a={true} />
+                <VerticalCard title="EICT Spaces" place="EICT Building" people="10" pc="10" image="https://picsum.photos/200/300" a={false}/>
             </Row>
 
         </Container>

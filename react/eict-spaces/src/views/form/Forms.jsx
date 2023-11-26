@@ -2,6 +2,8 @@ import React from "react";
 import { Button, Col, Container, Form, Input, Label, Row, FormGroup } from "reactstrap";
 import { Card, CardBody, CardImg, CardText } from "reactstrap"
 import './Form.css'
+import { LifePreserver } from "react-bootstrap-icons";
+import { Link } from "react-router-dom";
 
 const Forms = () => {
     return (
@@ -91,7 +93,7 @@ const Forms = () => {
                         </FormGroup>
                     </Form>
                     <Row className="d-flex justify-content-end me-1">
-                        <Button className="bton env ml-auto">
+                        <Button className="bton env ml-auto" tag={Link} to="/dashboard">
                             Enviar
                         </Button>
                     </Row>

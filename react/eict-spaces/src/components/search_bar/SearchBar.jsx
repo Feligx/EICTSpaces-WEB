@@ -33,7 +33,7 @@ const SearchBar = () => {
                 <Button color="primary" className="bton mx-1" onClick={toggleOffcanvas}>
                     <Funnel />
                 </Button>
-                <Button color="primary" className="bton mx-1">
+                <Button color="primary" className="bton mx-1" tag={Link} to="/dashboard/spaces/create">
                     <PlusLg />
                 </Button>
             </Col>
