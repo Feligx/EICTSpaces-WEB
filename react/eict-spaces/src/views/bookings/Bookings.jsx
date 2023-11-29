@@ -7,9 +7,9 @@ const books = [
     {
         nombreSalon: "nombreSalon",
         profilePic: "../../../public/fotoperf.webp",
-        person: "Camilo F",
+        person: "Camilo Fernandez",
         image: "../../../public/space.jpg",
-        reason: "para ver bochi",
+        reason: "Monitoria de programación",
         userAdmin: true,
         active: true,
         id : 1
@@ -17,9 +17,9 @@ const books = [
     {
         nombreSalon: "nombreSalon",
         profilePic: "../../../public/fotoperf.webp",
-        person: "Camilo F",
+        person: "Juan Jose Caballero",
         image: "../../../public/space.jpg",
-        reason: "para ver bochi",
+        reason: "Monitoria de pensamiento matemático",
         userAdmin: false,
         active: true,
         id : 2
@@ -27,9 +27,9 @@ const books = [
     {
         nombreSalon: "nombreSalon",
         profilePic: "../../../public/fotoperf.webp",
-        person: "Camilo F",
+        person: "Felipe Martinez",
         image: "../../../public/space.jpg",
-        reason: "para ver bochi",
+        reason: "Exposición proyecto Carrito con VR para la empresa RLV2",
         userAdmin: true,
         active: true,
         id : 3
@@ -37,9 +37,9 @@ const books = [
     {
         nombreSalon: "nombreSalon",
         profilePic: "../../../public/fotoperf.webp",
-        person: "Camilo F",
+        person: "Daniel Leyva",
         image: "../../../public/space.jpg",
-        reason: "para ver bochi",
+        reason: "Monitoria de Algebra abstracta",
         userAdmin: false,
         active: true,
         id : 4
