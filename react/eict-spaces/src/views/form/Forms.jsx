@@ -50,10 +50,10 @@ const Forms = () => {
                 </Col>
                 <Col md='7' className="">
 
-                    <Form className="">
+                    <Form className="me-2">
                         <FormGroup>
                             <Label for="nombreEvento">
-                                Email
+                                Nombre del evento
                             </Label>
                             <Input
                                 id="nombreEvento"

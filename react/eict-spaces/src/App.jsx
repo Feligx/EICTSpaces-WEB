@@ -11,6 +11,7 @@ import Footer from "./components/layout/footer/Footer.jsx";
 import {Col, Container, Row} from "reactstrap";
 import Crumbs from "./components/layout/breadcrumbs/Crumbs.jsx";
 import Menu from "./components/layout/menu/Menu.jsx";
+import Calendar from "./views/calendar/Calendar.jsx";
 
 
 const routes = [
@@ -62,6 +63,13 @@ const routes = [
         name: 'Bookings',
         layout: 'default',
         icon: 'ClockFill'
+    },
+    {
+        path: '/calendar',
+        element: <Calendar />,
+        name: 'Calendar',
+        layout: 'default',
+        icon: 'Calendar3Fill'
     }
 ]
 function App() {
