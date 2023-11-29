@@ -32,7 +32,8 @@ const Spaces = ({edit = false}) => {
     const { 
         handleSubmit, 
         control,
-        reset, 
+        reset,
+        watch,
         formState: {errors},
         getValues
     } = useForm({
@@ -84,6 +85,23 @@ const Spaces = ({edit = false}) => {
         }
     }, [])
 
+    watch((data, {name}) => {
+        const {
+            file: {value}
+        } = data
+
+    
+        if (value) {
+            const reader = new FileReader();
+    
+            reader.onloadend = () => {
+                setFilePreview(reader.result);
+            };
+    
+            reader.readAsDataURL(value);
+        }
+    })
+
     console.log(errors)
 
     return (
@@ -101,7 +119,7 @@ const Spaces = ({edit = false}) => {
                             control={control}
                             rules={{ required: true }}
                             render={({field})=> (
-                                <InputGroup onClick={handleFileClick} className="rounded bg-light h-100 d-flex justify-content-center align-items-center">
+                                <InputGroup onClick={handleFileClick} className={`${!!errors?.file ? 'invalid border border-warning' : ''} rounded bg-light h-100 d-flex justify-content-center align-items-center`}>
                                     <Input 
                                         disabled={edit} 
                                         type="file" 
@@ -118,6 +136,7 @@ const Spaces = ({edit = false}) => {
                                                 field.onChange(e)
                                             }
                                         } 
+                                        invalid={!!errors?.file}
                                         {...field}
                                     />
                                     {filePreview ? <img src={filePreview}/> : <CloudArrowUpFill className="text-muted" size="128"/> }
@@ -136,7 +155,7 @@ const Spaces = ({edit = false}) => {
                                         ({field}) => (
                                             <>
                                                 <Label for="space_name" tag="small" className="text-muted">Nombre</Label>
-                                                <Input disabled={edit} name="space_name" id="space_name" type="text" {...field} />
+                                                <Input disabled={edit} name="space_name" id="space_name" type="text" invalid={!!errors?.space_name} {...field} />
                                             </>            
                                         )
                                     }
@@ -149,7 +168,7 @@ const Spaces = ({edit = false}) => {
                                         ({field}) => (
                                             <>
                                                 <Label for="devices" tag="small" className="text-muted">Equipos</Label>
-                                                <Input disabled={edit} name="devices" id="devices" type="text" {...field}/>
+                                                <Input disabled={edit} name="devices" id="devices" type="text" invalid={!!errors?.devices} {...field}/>
                                             </>
                                         )
                                     }
@@ -164,7 +183,7 @@ const Spaces = ({edit = false}) => {
                                         ({field}) => (
                                             <>
                                                 <Label for="location" tag="small" className="text-muted">Ubicación</Label>
-                                                <Input disabled={edit} name="location" id="location" type="text" {...field}/>
+                                                <Input disabled={edit} name="location" id="location" type="text" invalid={!!errors?.location} {...field}/>
                                             </>
                                         )
                                     }
@@ -177,7 +196,7 @@ const Spaces = ({edit = false}) => {
                                         ({field}) => (
                                             <>
                                                 <Label for="area" tag="small" className="text-muted">Área</Label>
-                                                <Input disabled={edit} name="area" id="area" type="text" {...field}/>
+                                                <Input disabled={edit} name="area" id="area" type="text" invalid={!!errors?.area} {...field}/>
                                             </>
                                         )
                                     }
@@ -192,7 +211,7 @@ const Spaces = ({edit = false}) => {
                                         ({field}) => (
                                             <>
                                                 <Label for="capacity" tag="small" className="text-muted">Capacidad</Label>
-                                                <Input disabled={edit} name="capacity" id="capacity" type="text" {...field}/>
+                                                <Input disabled={edit} name="capacity" id="capacity" type="text" invalid={!!errors?.capacity} {...field}/>
                                             </>
                                         )
                                     }
@@ -205,7 +224,7 @@ const Spaces = ({edit = false}) => {
                                         ({field}) => (
                                             <>
                                                 <Label for="type" tag="small" className="text-muted">Tipo</Label>
-                                                <Input disabled={edit} name="type" id="type" type="text" {...field}/>
+                                                <Input disabled={edit} name="type" id="type" type="text" invalid={!!errors?.type} {...field}/>
                                             </>
                                         )
                                     }
@@ -222,7 +241,7 @@ const Spaces = ({edit = false}) => {
                                         ({field}) => (
                                             <>
                                                 <Label for="description" tag="small" className="text-muted">Descripción</Label>
-                                                <Input disabled={edit} type="text" name="description" id="description" {...field}/>
+                                                <Input disabled={edit} type="text" name="description" id="description" invalid={!!errors?.description} {...field}/>
                                             </>
                                         )
                                     }
