@@ -69,10 +69,10 @@ const HorizontalCard = ({ nombreSalon, profilePic, person, image, reason, userAd
                 <Modal isOpen={modal} toggle={toggle}>
                     <ModalHeader toggle={toggle}>
                         <h4 className="modal-title">
-                            Salon Ada Lovelace
+                            {nombreSalon}
                         </h4>
                         <h4 className="modal-title">
-                            Proyecto clase de programación
+                            {reason}
                         </h4>
                     </ModalHeader>
                     <ModalBody>
@@ -108,10 +108,10 @@ const HorizontalCard = ({ nombreSalon, profilePic, person, image, reason, userAd
                 <Modal isOpen={modal2} toggle={toggle2}>
                     <ModalHeader toggle={toggle2}>
                         <h4 className="modal-title">
-                            Salon Ada Lovelace
+                            {nombreSalon}
                         </h4>
                         <h4 className="modal-title">
-                            Proyecto clase de programación
+                            {reason}
                         </h4>
                     </ModalHeader>
                     <ModalBody>
