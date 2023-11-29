@@ -5,7 +5,7 @@ import {useState} from "react";
 
 const books = [
     {
-        nombreSalon: "nombreSalon",
+        nombreSalon: "Bardeen",
         profilePic: "../../../public/fotoperf.webp",
         person: "Camilo Fernandez",
         image: "../../../public/space.jpg",
@@ -15,7 +15,7 @@ const books = [
         id : 1
     },
     {
-        nombreSalon: "nombreSalon",
+        nombreSalon: "Davinci",
         profilePic: "../../../public/fotoperf.webp",
         person: "Juan Jose Caballero",
         image: "../../../public/space.jpg",
@@ -25,7 +25,7 @@ const books = [
         id : 2
     },
     {
-        nombreSalon: "nombreSalon",
+        nombreSalon: "Big Data",
         profilePic: "../../../public/fotoperf.webp",
         person: "Felipe Martinez",
         image: "../../../public/space.jpg",
@@ -35,7 +35,7 @@ const books = [
         id : 3
     },
     {
-        nombreSalon: "nombreSalon",
+        nombreSalon: "Big Data",
         profilePic: "../../../public/fotoperf.webp",
         person: "Daniel Leyva",
         image: "../../../public/space.jpg",
